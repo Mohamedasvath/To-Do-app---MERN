@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+// Replace with your deployed backend URL on Render
+const apiUrl = "https://to-do-app-mern-10ve.onrender.com";
+
 const Todo = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -9,8 +12,6 @@ const Todo = () => {
     const [editId, setEditId] = useState(null);
     const [editTitle, setEditTitle] = useState("");
     const [editDescription, setEditDescription] = useState("");
-
-    const apiUrl = "http://localhost:8000";
 
     useEffect(() => {
         getItems();
